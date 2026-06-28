@@ -62,7 +62,7 @@ abstract class CargoKitBuildTask extends DefaultTask {
             }
         }
 
-        project.exec {
+        task.exec('setup',Exec) {
             executable path
             args "build-gradle"
             environment "CARGOKIT_ROOT_PROJECT_DIR", rootProjectDir
